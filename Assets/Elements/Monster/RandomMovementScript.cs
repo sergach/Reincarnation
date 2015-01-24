@@ -22,7 +22,7 @@ public class RandomMovementScript : MonoBehaviour {
 	private bool legGo = false;
 	// Use this for initialization
 	void Start () {
-		StartRandomMovement ();
+		//StartRandomMovement ();
 	}
 
 	public void StartRandomMovement() {

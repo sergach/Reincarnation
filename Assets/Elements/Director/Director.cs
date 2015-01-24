@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Director : MonoBehaviour 
 {
-	private Camera camera;
+	private new Camera camera;
 	public static Vector2 mousePos;
 
 	public GameObject HeroPref;
