@@ -194,9 +194,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3e0655db2ad98b4c814b831830ceed7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leg0: {fileID: 146832}
-  leg1: {fileID: 146834}
+  legs: {fileID: 0}
   move: 1000
+  poison_count: 0
+  max_health: 100
+  axe: {fileID: 0}
 --- !u!212 &21225324
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -217,7 +219,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f90570a2e2c100f408d1eecee7e1d4a8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8b6adea948fe07748bbf4cba52fed2ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21246832
 SpriteRenderer:
