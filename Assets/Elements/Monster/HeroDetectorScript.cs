@@ -22,7 +22,7 @@ public class HeroDetectorScript : MonoBehaviour {
 			float distance = direction.magnitude;
 			int layerMask = opacityLayerMask.value;
 			if (!Physics2D.Raycast(origin, direction, distance, layerMask)) {
-				Debug.DrawLine(origin, hero.transform.position);
+				Debug.DrawLine(origin, hero.transform.position, Color.green);
 				isDetecting = true;
 			} else {
 				Debug.DrawLine(origin, hero.transform.position, Color.red);

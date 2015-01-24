@@ -61,6 +61,7 @@ GameObject:
   - 50: {fileID: 5086648}
   - 114: {fileID: 11486654}
   - 114: {fileID: 11486648}
+  - 114: {fileID: 11454556}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -129,7 +130,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.17952311, y: 3.94633532, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 486650}
@@ -174,6 +175,20 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: 3
   m_Center: {x: 0, y: 0}
+--- !u!114 &11454556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 888af7c829db52e41ba8734446b1c2b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AxePref: {fileID: 114596, guid: 82b2b918d428c5d49bc967a3617311a7, type: 2}
+  fightDelay: 1
+  heroDetector: {fileID: 11486650}
 --- !u!114 &11486648
 MonoBehaviour:
   m_ObjectHideFlags: 1
