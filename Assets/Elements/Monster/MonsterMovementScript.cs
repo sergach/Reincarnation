@@ -6,8 +6,8 @@ public class MonsterMovementScript : MonoBehaviour {
 	public RandomMovementScript randomMovement;
 	public LegsScript legs;
 
-	[Range( 100f, 1000f )]
-	public float force = 300f;
+	[Range( 100f, 2000f )]
+	public float force = 1500f;
 	// Use this for initialization
 	private bool randomMove = true;
 	private GameObject hero;
