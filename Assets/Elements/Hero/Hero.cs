@@ -60,6 +60,7 @@ public class Hero : MonoBehaviour
 		if (axe != null)
 		{
 			axe.transform.position = transform.position;
+			axe.GetComponent<Axe>().SetDirection(Director.mousePos - new Vector2(transform.position.x,transform.position.y));
 			if (Input.GetMouseButtonDown (0)) 
 			{
 				axe.GetComponent<Axe>().Attack();

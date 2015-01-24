@@ -6,7 +6,9 @@ public class Axe : MonoBehaviour
 	private SpriteRenderer sr;
 
 	public GameObject attack;
-	
+
+	private Vector2 direction;
+
 	public float offset;
 	public float swingDeg;
 	private float swing;
@@ -20,9 +22,13 @@ public class Axe : MonoBehaviour
 		swing = 1f;
 	}
 
+	public void SetDirection(Vector2 d)
+	{
+		direction = d;
+	}
+
 	void Update () 
 	{
-		Vector2 direction = Director.mousePos - new Vector2(transform.position.x,transform.position.y);
 		direction.Normalize();
 		angle = Mathf.Atan2(-direction.x, direction.y) * Mathf.Rad2Deg;
 		transform.rotation = Quaternion.Euler(0f, 0f, angle + swingDeg * swing);
