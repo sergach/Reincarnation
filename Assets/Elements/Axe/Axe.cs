@@ -4,8 +4,7 @@ using System.Collections;
 public class Axe : MonoBehaviour 
 {
 	private SpriteRenderer sr;
-	
-	public Camera camera;
+
 	public GameObject attack;
 	
 	public float offset;
@@ -21,8 +20,8 @@ public class Axe : MonoBehaviour
 
 	void Update () 
 	{
-		Vector3 direction = camera.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-		direction.z = 0f; direction.Normalize();
+		Vector2 direction = Director.mousePos - new Vector2(transform.position.x,transform.position.y);
+		direction.Normalize();
 		angle = Mathf.Atan2(-direction.x, direction.y) * Mathf.Rad2Deg;
 		transform.rotation = Quaternion.Euler(0f, 0f, angle + swingDeg * swing);
 

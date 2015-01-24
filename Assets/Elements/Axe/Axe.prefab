@@ -25,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.27377224, y: -.45587638, z: 0}
+  m_LocalPosition: {x: -.430000007, y: 2.00999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,7 +56,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a60e96a3595767f4f8037c787d436975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
   attack: {fileID: 150224, guid: 970c94ffe489fac4da7e8e35f3457c0d, type: 2}
   offset: .5
   swingDeg: 99

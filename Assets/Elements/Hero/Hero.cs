@@ -10,14 +10,17 @@ public class Hero : MonoBehaviour
 	private float health;					//здоровье
 	public int poison_count;				//кол-во зелей в мешке
 	public float max_health = 100f;			//max здоровье
-
-	public Axe axe;
+	
+	public GameObject AxePref;
+	private GameObject axe;
 
 	void Start () 
 	{
 		time = 0f;
 		health = max_health;
 		poison_count = 0;
+
+		axe = Instantiate (AxePref, Vector3.zero, Quaternion.identity) as GameObject;
 	}
 
 	void Update () 
@@ -49,7 +52,7 @@ public class Hero : MonoBehaviour
 			axe.transform.position = transform.position;
 			if (Input.GetMouseButtonDown (0)) 
 			{
-				axe.Attack();
+				axe.GetComponent<Axe>().Attack();
 			}
 		}
 
