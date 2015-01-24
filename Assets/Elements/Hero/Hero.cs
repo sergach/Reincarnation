@@ -8,6 +8,8 @@ public class Hero : MonoBehaviour
 
 	public float move;
 
+	public 
+
 	void Start () 
 	{
 		time = 0f;
