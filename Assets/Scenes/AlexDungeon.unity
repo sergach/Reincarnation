@@ -191,7 +191,7 @@ Transform:
   - {fileID: 831262015}
   - {fileID: 478695282}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!61 &61229781
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -261,6 +261,68 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: 3
   m_Center: {x: 0, y: 0}
+--- !u!1 &305549540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 169840, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 305549541}
+  - 114: {fileID: 305549542}
+  m_Layer: 0
+  m_Name: Director
+  m_TagString: Untagged
+  m_Icon: {fileID: -1500306622, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &305549541
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 469840, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  m_GameObject: {fileID: 305549540}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .00999999978, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1300595001}
+  - {fileID: 986589660}
+  - {fileID: 1935377399}
+  - {fileID: 1145306778}
+  - {fileID: 1501373321}
+  - {fileID: 1797820885}
+  - {fileID: 1959607772}
+  - {fileID: 1262046502}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+--- !u!114 &305549542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11469824, guid: 492494fb9b96dd3468f758bf0ba21a65,
+    type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  m_GameObject: {fileID: 305549540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d2d692ea6880d49aa6a0d9546f4fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HeroPref: {fileID: 125320, guid: d33e2375246a8234fbf0a1cef29d3308, type: 2}
+  BossPref: {fileID: 125320, guid: d33e2375246a8234fbf0a1cef29d3308, type: 2}
+  MonsterPref: {fileID: 125320, guid: d33e2375246a8234fbf0a1cef29d3308, type: 2}
+  SheepPref: {fileID: 125320, guid: d33e2375246a8234fbf0a1cef29d3308, type: 2}
+  heroSpawn: {fileID: 1300595001}
+  bossSpawn: {fileID: 986589660}
+  monsterSpawn:
+  - {fileID: 1935377399}
+  - {fileID: 1145306778}
+  - {fileID: 1501373321}
+  sheepSpawn:
+  - {fileID: 1797820885}
+  - {fileID: 1959607772}
+  - {fileID: 1262046502}
 --- !u!1 &377520632
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,7 +348,7 @@ Transform:
   m_GameObject: {fileID: 377520632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.360000014, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.04999995, y: 1.04999995, z: 1}
   m_Children: []
   m_Father: {fileID: 49792894}
   m_RootOrder: 1
@@ -711,6 +773,33 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f932507ee494a21469cdc7c7f4d5db12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &986589659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 169838, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 986589660}
+  m_Layer: 0
+  m_Name: BossSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 1319202362, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &986589660
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 469838, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  m_GameObject: {fileID: 986589659}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.73999977, y: 4.71000004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 305549541}
+  m_RootOrder: 1
 --- !u!1 &1036365925
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,7 +882,7 @@ Transform:
   m_Children:
   - {fileID: 506752817}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!114 &1066515149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -859,6 +948,33 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 4.81347084, y: 1.95428765}
   m_Center: {x: -.403264761, y: -.352856308}
+--- !u!1 &1145306777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 169832, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1145306778}
+  m_Layer: 0
+  m_Name: MonsterSpawn1
+  m_TagString: Untagged
+  m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1145306778
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 469832, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  m_GameObject: {fileID: 1145306777}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.30999994, y: 2.45000005, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 305549541}
+  m_RootOrder: 3
 --- !u!1 &1158353383
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,7 +1058,61 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
+--- !u!1 &1262046501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 169824, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1262046502}
+  m_Layer: 0
+  m_Name: SheepSpawn2
+  m_TagString: Untagged
+  m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1262046502
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 469824, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  m_GameObject: {fileID: 1262046501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.38999987, y: -2.45000005, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 305549541}
+  m_RootOrder: 7
+--- !u!1 &1300595000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 169836, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1300595001}
+  m_Layer: 0
+  m_Name: HeroSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1300595001
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 469836, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  m_GameObject: {fileID: 1300595000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.98000002, y: -5.8499999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 305549541}
+  m_RootOrder: 0
 --- !u!1 &1304775841
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,7 +1145,7 @@ Transform:
   - {fileID: 931026375}
   - {fileID: 123725792}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!212 &1304775843
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1047,6 +1217,50 @@ MonoBehaviour:
   randomMovement: {fileID: 1304775844}
   legs: {fileID: 931026374}
   force: 500
+--- !u!1001 &1331235093
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 469840, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .00999999978
+      objectReference: {fileID: 0}
+    - target: {fileID: 469840, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 469840, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 469840, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 469840, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 469840, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 469840, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 469840, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_RootGameObject: {fileID: 305549540}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1406952062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,7 +1285,7 @@ Transform:
   m_GameObject: {fileID: 1406952062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .360000014, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.04999995, y: 1.04999995, z: 1}
   m_Children: []
   m_Father: {fileID: 49792894}
   m_RootOrder: 0
@@ -1098,6 +1312,33 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: f69ba2dc92f6cdf4b96ae12f7f770f83, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1501373320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 169830, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1501373321}
+  m_Layer: 0
+  m_Name: MonsterSpawn2
+  m_TagString: Untagged
+  m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1501373321
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 469830, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  m_GameObject: {fileID: 1501373320}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.25, y: .839999974, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 305549541}
+  m_RootOrder: 4
 --- !u!1 &1502616841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,6 +1485,33 @@ Prefab:
   m_RootGameObject: {fileID: 1304775841}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1797820884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 169828, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1797820885}
+  m_Layer: 0
+  m_Name: SheepSpawn0
+  m_TagString: Untagged
+  m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1797820885
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 469828, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  m_GameObject: {fileID: 1797820884}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.46000004, y: 1.66999996, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 305549541}
+  m_RootOrder: 5
 --- !u!1001 &1845445643
 Prefab:
   m_ObjectHideFlags: 0
@@ -1292,6 +1560,60 @@ Prefab:
   m_RootGameObject: {fileID: 61229776}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1935377398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 169834, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1935377399}
+  m_Layer: 0
+  m_Name: MonsterSpawn0
+  m_TagString: Untagged
+  m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1935377399
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 469834, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  m_GameObject: {fileID: 1935377398}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.19000006, y: 3.75999999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 305549541}
+  m_RootOrder: 2
+--- !u!1 &1959607771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 169826, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1959607772}
+  m_Layer: 0
+  m_Name: SheepSpawn1
+  m_TagString: Untagged
+  m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1959607772
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 469826, guid: 492494fb9b96dd3468f758bf0ba21a65, type: 2}
+  m_PrefabInternal: {fileID: 1331235093}
+  m_GameObject: {fileID: 1959607771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.00999999, y: -1.92999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 305549541}
+  m_RootOrder: 6
 --- !u!1001 &1999068952
 Prefab:
   m_ObjectHideFlags: 0
