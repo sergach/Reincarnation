@@ -58,7 +58,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack: {fileID: 150224, guid: 970c94ffe489fac4da7e8e35f3457c0d, type: 2}
   offset: .5
-  swingDeg: 99
+  swingDeg: 80
+  attack_tag: 
 --- !u!212 &21214596
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 53d31857da93ac64093362e2fe40f838, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c82586f2289cd24a94dd4ee20c9730f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

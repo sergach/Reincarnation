@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11440154}
   m_Layer: 12
   m_Name: Attack
-  m_TagString: Untagged
+  m_TagString: BadAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
