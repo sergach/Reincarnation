@@ -11,6 +11,7 @@ public class Hero : MonoBehaviour
 	public int poison_count;			//кол-во зелей в мешке
 	public float max_health = 100f;			//max здоровье
 
+	public Axe axe;
 
 	void Start () 
 	{
@@ -41,6 +42,15 @@ public class Hero : MonoBehaviour
 		{
 			rigidbody2D.AddForce (move * new Vector2(1,0) * Time.deltaTime);
 			go = true;
+		}
+
+		if (axe != null)
+		{
+			axe.transform.position = transform.position;
+			if (Input.GetMouseButtonDown (0)) 
+			{
+				axe.Attack();
+			}
 		}
 
 		if (go)
