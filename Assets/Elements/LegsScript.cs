@@ -19,7 +19,6 @@ public class LegsScript : MonoBehaviour {
 
 	public void Go() {
 		go = true;
-		time = 0;
 	}
 
 	public void Stop() {
@@ -33,8 +32,8 @@ public class LegsScript : MonoBehaviour {
 	void Update () {
 		if (go) {
 			time -= Time.deltaTime * 12;
-			leftLeg.transform.localPosition = new Vector3 (-0.17f, 0.05f * Mathf.Sin (time), 0);
-			rightLeg.transform.localPosition = new Vector3 (0.17f, 0.05f * Mathf.Sin (time + 3.14f), 0);
+			leftLeg.transform.localPosition = new Vector3 (startLeft.x, startLeft.y + 0.05f * Mathf.Sin (time), 0);
+			rightLeg.transform.localPosition = new Vector3 (startRight.x, startRight.y + 0.05f * Mathf.Sin (time + 3.14f), 0);
 		}
 	}
 }
