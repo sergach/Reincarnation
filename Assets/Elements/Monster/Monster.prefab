@@ -188,7 +188,7 @@ MonoBehaviour:
   heroDetector: {fileID: 11486650}
   randomMovement: {fileID: 11486654}
   legs: {fileID: 11486652}
-  force: 500
+  force: 1250
 --- !u!114 &11486650
 MonoBehaviour:
   m_ObjectHideFlags: 1
