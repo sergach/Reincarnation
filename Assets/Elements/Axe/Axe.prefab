@@ -58,6 +58,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
   attack: {fileID: 150224, guid: 970c94ffe489fac4da7e8e35f3457c0d, type: 2}
+  offset: .5
   swingDeg: 99
 --- !u!212 &21214596
 SpriteRenderer:

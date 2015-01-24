@@ -7,7 +7,8 @@ public class Axe : MonoBehaviour
 	
 	public Camera camera;
 	public GameObject attack;
-
+	
+	public float offset;
 	public float swingDeg;
 	private float swing;
 	private float angle;
