@@ -7,12 +7,16 @@ public class Hero : MonoBehaviour
 	private float time;
 
 	public float move;
+	public float health;		//здоровье
+	public int poison_count;			//кол-во зелей в мешке
+	public float max_health = 100f;			//max здоровье
 
-	public 
 
 	void Start () 
 	{
 		time = 0f;
+		health = max_health;
+		poison_count = 0;
 	}
 
 	void Update () 
@@ -44,5 +48,16 @@ public class Hero : MonoBehaviour
 		
 		leg0.transform.localPosition = new Vector3(-0.17f,0.05f*Mathf.Sin (time),0);
 		leg1.transform.localPosition = new Vector3(0.17f,0.05f*Mathf.Sin (time+3.14f),0);
+
+
+		if (Input.GetKey(KeyCode.H))
+		{
+			if (poison_count>0 && health<100f)
+			{
+				health = max_health;
+				poison_count -= 1;
+			}
+		}
 	}
+
 }
