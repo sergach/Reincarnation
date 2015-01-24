@@ -12,6 +12,8 @@ public class Axe : MonoBehaviour
 	private float swing;
 	private float angle;
 
+	public string attack_tag;
+
 	void Start () 
 	{
 		sr = GetComponent<SpriteRenderer> ();
@@ -25,10 +27,14 @@ public class Axe : MonoBehaviour
 		angle = Mathf.Atan2(-direction.x, direction.y) * Mathf.Rad2Deg;
 		transform.rotation = Quaternion.Euler(0f, 0f, angle + swingDeg * swing);
 
-
-		if (transform.up.y > 0)
-			sr.sortingOrder = -3;
+		if (transform.up.x > 0)
+			transform.localScale = new Vector3(1,1,1);
 		else
+			transform.localScale = new Vector3(-1,1,1);
+
+		if (transform.up.y > 0) 
+			sr.sortingOrder = -3;
+		else 
 			sr.sortingOrder = 3;
 	}
 
@@ -37,5 +43,6 @@ public class Axe : MonoBehaviour
 		swing = -swing;
 		GameObject a = Instantiate(attack,transform.position,Quaternion.Euler(0f, 0f, angle)) as GameObject;
 		a.transform.localScale = new Vector3(-swing,1,1);
+		a.tag = attack_tag;
 	}
 }

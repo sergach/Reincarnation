@@ -21,6 +21,16 @@ public class Hero : MonoBehaviour
 		poison_count = 0;
 
 		axe = Instantiate (AxePref, Vector3.zero, Quaternion.identity) as GameObject;
+		axe.GetComponent<Axe>().attack_tag = "GoodAttack";
+	}
+
+	void OnCollisionEnter2D(Collision2D otherColl)
+	{
+		if (otherColl.gameObject.tag == "BadAttack") 
+		{
+			health--;
+
+		}
 	}
 
 	void Update () 
