@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ReincarnationScript : MonoBehaviour 
-{
+public class ReincarnationScript : MonoBehaviour {
 	public static int nextLevel;
+	public static int levels = 0;
 
 	public float speed;
 	public float delay;
@@ -21,7 +21,8 @@ public class ReincarnationScript : MonoBehaviour
 		time += Time.deltaTime;
 		if (time > delay) 
 		{
-			Application.LoadLevel(Random.Range (0,3));
+			levels++;
+			Application.LoadLevel(levels);
 
 		}
 	}

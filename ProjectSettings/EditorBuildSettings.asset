@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/DirectoredDungeon.unity
-  - enabled: 1
-    path: Assets/Scenes/IAmPoison/IAmPoison.unity
+    path: Assets/Scenes/IamHuman.unity
   - enabled: 1
     path: Assets/Scenes/IAmAxe/IAmAxe.unity
   - enabled: 1
+    path: Assets/Scenes/IanSheep.unity
+  - enabled: 1
+    path: Assets/Scenes/IamHuman.unity
+  - enabled: 1
     path: Assets/Scenes/Reincarnation/Reincarnation.unity
   - enabled: 1
+    path: Assets/Scenes/IAmPoison/IAmPoison.unity
+  - enabled: 1
     path: Assets/Scenes/AxeBroken/AxeBroken.unity
+  - enabled: 1
+    path: Assets/Scenes/DirectoredDungeon.unity
