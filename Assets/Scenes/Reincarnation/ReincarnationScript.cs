@@ -22,7 +22,7 @@ public class ReincarnationScript : MonoBehaviour {
 		if (time > delay) 
 		{
 			levels++;
-			Application.LoadLevel(levels);
+			Application.LoadLevel(levels % 4);
 
 		}
 	}
