@@ -12,7 +12,7 @@ public class PlayableSheepScript : MonoBehaviour {
 	[Range( 1f, 60f )]
 	public float timeBeforeAxe = 10;
 	private float axeTime = 0;
-	private float axeFlyTime = 2;
+	private float axeFlyTime = 30;
 
 	public GameObject axePref;
 	private GameObject axe = null;
@@ -58,7 +58,11 @@ public class PlayableSheepScript : MonoBehaviour {
 				} else {
 					if (axeTime - timeBeforeAxe < axeFlyTime) {
 						Vector3 newPos = axe.transform.position + 
-							(axeTime - timeBeforeAxe) / axeFlyTime * (transform.position - axe.transform.position); 
+							(axeTime - timeBeforeAxe) / axeFlyTime * (transform.position - axe.transform.position) * 5f;
+
+						axe.transform.Rotate(new Vector3 (
+							0f,0f, (axeTime - timeBeforeAxe) * 10f
+							));
 						axe.transform.position = newPos;
 					}
 				}
@@ -76,7 +80,7 @@ public class PlayableSheepScript : MonoBehaviour {
 	{
 		dead = true;
 		time = 0f;
-		legs.Stop ();
+		legs.Go ();
 		//rigidbody2D.
 	}
 }
