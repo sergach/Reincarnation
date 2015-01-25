@@ -17,6 +17,10 @@ public class Axe : MonoBehaviour
 
 	public string attack_tag;
 
+	public AudioClip axeAudio;
+	
+
+
 	void Start () 
 	{
 		sr = GetComponent<SpriteRenderer> ();
@@ -47,6 +51,8 @@ public class Axe : MonoBehaviour
 
 	public void Attack()
 	{
+		AudioSource.PlayClipAtPoint(axeAudio, transform.position);
+
 		swing = -swing;
 		GameObject a = Instantiate(attack,transform.position,Quaternion.Euler(0f, 0f, angle)) as GameObject;
 		a.transform.localScale = new Vector3(-swing,1,1);

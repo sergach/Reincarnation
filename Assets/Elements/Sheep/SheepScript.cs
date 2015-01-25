@@ -11,47 +11,33 @@ public class SheepScript : MonoBehaviour {
 
 	public float deadHeight;
 
+	private float deathTime = 0.5f;
+	private bool dead = false;
+
+	public AudioClip dieAudio;
+
 	void Start () {
 		time = 0f;	
 	}
 	
 
 	void Update () {
-
-		bool go = false;
-
-		if (Input.GetKey (KeyCode.W)) 
-		{
-			rigidbody2D.AddForce (move * new Vector2 (0, 1) * Time.deltaTime);
-			go = true;
+		if (dead) {
+			if (time < deathTime) {
+				time += Time.deltaTime;
+				transform.rotation = new Quaternion(0f, 0f, time / deathTime * 3.14f, 0f);
+			}
 		}
-		if (Input.GetKey (KeyCode.A))
-		{
-			rigidbody2D.AddForce (move * new Vector2(-1,0) * Time.deltaTime);
-			go = true;
-		}
-		if (Input.GetKey (KeyCode.S))
-		{
-			rigidbody2D.AddForce (move * new Vector2(0,-1) * Time.deltaTime);
-			go = true;
-		}
-		if (Input.GetKey (KeyCode.D))
-		{
-			rigidbody2D.AddForce (move * new Vector2(1,0) * Time.deltaTime);
-			go = true;
-		}
-		
-		if (go)
-		{
-			time -= Time.deltaTime*12;		
-			legs.Go ();
-		}
-		else legs.Stop();
 	}
 
 	public void Die()
 	{
+		AudioSource.PlayClipAtPoint(dieAudio, transform.position);
+
 		deadHeight = transform.position.y - 2f;
+		dead = true;
+		time = 0f;
+		legs.Stop ();
 		//rigidbody2D.
 	}
 }
