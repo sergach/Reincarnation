@@ -136,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .170000002, y: 0, z: 0}
+  m_LocalPosition: {x: .170000002, y: -.200000003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 486650}
@@ -148,7 +148,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.57999992, y: 6.32000017, z: 0}
+  m_LocalPosition: {x: 1.89999998, y: -.50999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 486650}
@@ -163,7 +163,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.170000002, y: 0, z: 0}
+  m_LocalPosition: {x: -.170000002, y: -.200000003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 486650}
@@ -175,7 +175,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196482}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.550000012, z: 0}
+  m_LocalPosition: {x: 0, y: -.689999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 486654}
@@ -204,7 +204,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Radius: 3
+  m_Radius: 4
   m_Center: {x: 0, y: 0}
 --- !u!58 &5896482
 CircleCollider2D:
@@ -216,7 +216,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Radius: .200000003
-  m_Center: {x: -.109999999, y: 0}
+  m_Center: {x: -.189999998, y: 0}
 --- !u!58 &5896484
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -227,7 +227,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Radius: .200000003
-  m_Center: {x: .109999999, y: 0}
+  m_Center: {x: .189999998, y: 0}
 --- !u!61 &6196482
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -237,7 +237,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .50999999, y: .839999974}
+  m_Size: {x: .75, y: 1.26999998}
   m_Center: {x: 0, y: 0}
 --- !u!114 &11454556
 MonoBehaviour:
@@ -251,7 +251,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AxePref: {fileID: 114596, guid: 82b2b918d428c5d49bc967a3617311a7, type: 2}
-  fightDelay: 1
+  monsterAxeSprite: {fileID: 21300000, guid: e4c7da4ffde6ae14c94f6c574fb9cdbd, type: 3}
+  fightDelay: .699999988
   heroDetector: {fileID: 11486650}
 --- !u!114 &11486648
 MonoBehaviour:
@@ -267,7 +268,7 @@ MonoBehaviour:
   heroDetector: {fileID: 11486650}
   randomMovement: {fileID: 11486654}
   legs: {fileID: 11486652}
-  force: 1250
+  force: 1400
 --- !u!114 &11486650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -308,8 +309,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   legsScript: {fileID: 11486652}
-  movementTimePeriod: 2
-  movementForce: 500
+  movementTimePeriod: 3
+  movementForce: 700
   legMovementTime: .800000012
 --- !u!212 &21286648
 SpriteRenderer:
@@ -331,7 +332,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f932507ee494a21469cdc7c7f4d5db12, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d7d69b9690ae22944a8e40a072cdb79c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21286650
 SpriteRenderer:
@@ -353,7 +354,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f90570a2e2c100f408d1eecee7e1d4a8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76cadd1cf4c2c6a45ada758051114e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21286652
 SpriteRenderer:
@@ -375,7 +376,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f932507ee494a21469cdc7c7f4d5db12, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d7d69b9690ae22944a8e40a072cdb79c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

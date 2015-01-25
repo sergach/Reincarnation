@@ -20,9 +20,11 @@ public class RandomMovementScript : MonoBehaviour {
 	
 	private float legTime = 0;
 	private bool legGo = false;
+	private float randomMovementTimePeriod;
 	// Use this for initialization
 	void Start () {
 		//StartRandomMovement ();
+		randomMovementTimePeriod = Random.Range(movementTimePeriod / 2, movementTimePeriod);
 	}
 
 	public void StartRandomMovement() {
@@ -39,7 +41,8 @@ public class RandomMovementScript : MonoBehaviour {
 	void Update () {
 		if (go) {
 			movementTime += Time.deltaTime;
-			if (movementTime > movementTimePeriod) {
+			if (movementTime > randomMovementTimePeriod) {
+				randomMovementTimePeriod = Random.Range(movementTimePeriod / 2, movementTimePeriod);
 				movementTime = 0;
 				legGo = true;
 				legTime = 0;

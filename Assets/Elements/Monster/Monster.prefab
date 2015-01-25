@@ -457,7 +457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   legsScript: {fileID: 11486652}
-  movementTimePeriod: 2
+  movementTimePeriod: 4
   movementForce: 500
   legMovementTime: .800000012
 --- !u!212 &21206020
