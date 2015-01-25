@@ -61,6 +61,7 @@ MonoBehaviour:
   offset: .5
   swingDeg: 80
   attack_tag: 
+  axeAudio: {fileID: 8300000, guid: ec2b6f104f1044b47bf12e841b3122eb, type: 3}
 --- !u!212 &21214596
 SpriteRenderer:
   m_ObjectHideFlags: 1
