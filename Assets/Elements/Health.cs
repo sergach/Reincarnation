@@ -25,13 +25,15 @@ public class Health : MonoBehaviour
 			if (hp > 0)
 				hp--;
 		}
-		if (damage_tag == "BadAttack" & otherColl.gameObject.tag == "SuperAttack")
+		if (damage_tag == "GoodAttack" & otherColl.gameObject.tag == "SuperAttack")
 		{
-			for (int i=0; i<5; i++)
+			for (int i=0; i<50; i++)
 			{
-				hpCells[hp-1].SetActive(false);
-				if (hp > 0)
+				if (hp>0 )
+				{
+					hpCells[hp-1].SetActive(false);
 					hp--;
+				}
 			}
 		}
 	}

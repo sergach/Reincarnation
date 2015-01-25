@@ -9,6 +9,10 @@ public class GoldenAxeItem : MonoBehaviour
 		SheepScript sheep = otherColl.gameObject.GetComponent<SheepScript>();
 		Hero hero = otherColl.gameObject.GetComponent<Hero>();
 		if (sheep!=null) sheep.Die();
-		if (hero!=null) hero.GetGoldenAxe();
+		if (hero != null) 
+		{
+			hero.GetGoldenAxe ();
+			Destroy (gameObject);
+		}
 	}
 }
