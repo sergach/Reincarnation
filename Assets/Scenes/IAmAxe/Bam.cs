@@ -4,22 +4,24 @@ using System.Collections;
 public class Bam : MonoBehaviour
 {
 	public float k;
-	public float delay;
-	private float time;
+
+	public Transform bar;
+	public float strength;
 
 	void Start () 
 	{
 		k = 0f;
-		time = delay;
+		strength = 1f;
 	}
 
 	void Update () 
 	{
-		time += Time.deltaTime*3;
-		if (Input.GetMouseButton (0) | time > delay) 
+		if (Input.GetMouseButton (0)) 
 		{
 			k = 1;
-			time = 0;
+			if (strength-0.05f>0)
+				strength -= 0.05f;
+			else strength = 0;
 		}
 
 		if (k > 0) 
@@ -27,5 +29,12 @@ public class Bam : MonoBehaviour
 			k-=Time.deltaTime;
 		}
 		transform.rotation = Quaternion.Euler (0, 0, k * 45f);
+		
+		bar.localScale = new Vector3 (strength, 1, 1);
+
+		if (strength <= 0) 
+		{
+			Application.LoadLevel("AxeBroken");
+		}
 	}
 }
