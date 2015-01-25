@@ -81,4 +81,8 @@ public class Hero : MonoBehaviour
 		}
 	}
 
+	public void GetGoldenAxe()
+	{
+		axe.GetComponent<Axe> ().Upgrade ();
+	}
 }

@@ -9,6 +9,8 @@ public class SheepScript : MonoBehaviour {
 
 	public float move;
 
+	public float deadHeight;
+
 	void Start () {
 		time = 0f;	
 	}
@@ -45,6 +47,11 @@ public class SheepScript : MonoBehaviour {
 			legs.Go ();
 		}
 		else legs.Stop();
-	
+	}
+
+	public void Die()
+	{
+		deadHeight = transform.position.y - 2f;
+		//rigidbody2D.
 	}
 }

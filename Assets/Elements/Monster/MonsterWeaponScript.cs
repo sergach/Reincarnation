@@ -5,6 +5,7 @@ public class MonsterWeaponScript : MonoBehaviour
 {
 	public GameObject AxePref;
 	private GameObject axe;
+	public Sprite monsterAxeSprite;
 
 	public float fightDelay;
 	private float time;
@@ -15,6 +16,7 @@ public class MonsterWeaponScript : MonoBehaviour
 	{
 		axe = Instantiate (AxePref, Vector3.zero, Quaternion.identity) as GameObject;
 		axe.GetComponent<Axe>().attack_tag = "BadAttack";
+		axe.GetComponent<SpriteRenderer> ().sprite = monsterAxeSprite;
 	}
 
 	void Update () 
