@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 405178}
   - 212: {fileID: 21205178}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 405180}
   - 212: {fileID: 21205180}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 405182}
   - 114: {fileID: 11405178}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,8 @@ GameObject:
   - 114: {fileID: 11405180}
   - 50: {fileID: 5005178}
   - 61: {fileID: 6105178}
-  m_Layer: 0
+  - 114: {fileID: 11406176}
+  m_Layer: 10
   m_Name: SheepPref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +113,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.27999997, y: -1.38, z: 0}
+  m_LocalPosition: {x: 4.64477348, y: -.0825697184, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 405182}
@@ -172,6 +173,21 @@ MonoBehaviour:
   move: 1000
   deadHeight: 0
   dieAudio: {fileID: 8300000, guid: 89ddd9a657cb14044b8e33048cfe7fd6, type: 3}
+--- !u!114 &11406176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750b32358be1d7f4587221a037b86c96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  legsScript: {fileID: 11405178}
+  movementTimePeriod: 3.0999999
+  movementForce: 200
+  legMovementTime: .569999993
 --- !u!212 &21205178
 SpriteRenderer:
   m_ObjectHideFlags: 1
