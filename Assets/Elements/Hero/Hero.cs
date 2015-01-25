@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Hero : MonoBehaviour 
 {
+	public GameObject body;
 	public LegsScript legs;
 	private float time;
 
@@ -45,6 +46,7 @@ public class Hero : MonoBehaviour
 		{
 			rigidbody2D.AddForce (move * new Vector2(-1,0) * Time.deltaTime);
 			go = true;
+			body.transform.localScale = new Vector3(-1,1,1);
 		}
 		if (Input.GetKey (KeyCode.S))
 		{
@@ -55,6 +57,7 @@ public class Hero : MonoBehaviour
 		{
 			rigidbody2D.AddForce (move * new Vector2(1,0) * Time.deltaTime);
 			go = true;
+			body.transform.localScale = new Vector3(1,1,1);
 		}
 
 		if (axe != null)
