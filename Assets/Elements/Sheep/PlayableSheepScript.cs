@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class PlayableSheepScript : MonoBehaviour {
@@ -20,6 +20,8 @@ public class PlayableSheepScript : MonoBehaviour {
 	private float deathTime = 0.5f;
 	private bool dead = false;
 
+
+	private float deadTotalTime = 0;
 	public AudioClip dieAudio;
 
 	void Start () {
@@ -74,6 +76,10 @@ public class PlayableSheepScript : MonoBehaviour {
 			if (time < deathTime) {
 				time += Time.deltaTime;
 				transform.rotation = new Quaternion(0f, 0f, time / deathTime * 3.14f, 0f);
+			}
+			deadTotalTime += Time.deltaTime;
+			if (deadTotalTime > 3f) {
+				Application.LoadLevel("Reincarnation");
 			}
 		}
 	}
