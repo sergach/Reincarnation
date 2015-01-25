@@ -8,9 +8,7 @@ public class Hero : MonoBehaviour
 	private float time;
 
 	public float move;
-	private float health;					//здоровье
-	public int poison_count;				//кол-во зелей в мешке
-	public float max_health = 100f;			//max здоровье
+	public Health health;
 	
 	public GameObject AxePref;
 	private GameObject axe;
@@ -18,8 +16,6 @@ public class Hero : MonoBehaviour
 	void Start () 
 	{
 		time = 0f;
-		health = max_health;
-		poison_count = 0;
 
 		axe = Instantiate (AxePref, Vector3.zero, Quaternion.identity) as GameObject;
 		axe.GetComponent<Axe>().attack_tag = "GoodAttack";
@@ -27,11 +23,7 @@ public class Hero : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D otherColl)
 	{
-		if (otherColl.gameObject.tag == "BadAttack") 
-		{
-			health--;
-
-		}
+		health.Collide (otherColl);
 	}
 
 	void Update () 
@@ -77,13 +69,15 @@ public class Hero : MonoBehaviour
 		} 
 		else legs.Stop();
 		
-		if (Input.GetKey(KeyCode.H))
+		if (Input.GetMouseButtonDown (1)) 
 		{
-			if (poison_count>0 && health<100f)
-			{
-				health = max_health;
-				poison_count -= 1;
-			}
+			health.DrinkPoison();
+		}
+
+		if (health.IsDead ()) 
+		{
+			ReincarnationScript.nextLevel = Application.loadedLevel;
+			Application.LoadLevel("Reincarnation");
 		}
 	}
 

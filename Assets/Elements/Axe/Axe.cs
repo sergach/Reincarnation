@@ -6,6 +6,7 @@ public class Axe : MonoBehaviour
 	private SpriteRenderer sr;
 
 	public GameObject attack;
+	public Sprite goldenSprite;
 
 	private Vector2 direction;
 
@@ -50,5 +51,11 @@ public class Axe : MonoBehaviour
 		GameObject a = Instantiate(attack,transform.position,Quaternion.Euler(0f, 0f, angle)) as GameObject;
 		a.transform.localScale = new Vector3(-swing,1,1);
 		a.tag = attack_tag;
+	}
+
+	public void Upgrade()
+	{
+		attack_tag = "SuperAttack";
+		sr.sprite = goldenSprite;
 	}
 }

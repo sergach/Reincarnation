@@ -12,8 +12,9 @@ public class PoisonScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.gameObject.name == "Hero") {
-			other.gameObject.GetComponent<Hero>().poison_count += 1;
+		Hero h = other.gameObject.GetComponent<Hero> ();
+		if (h != null) {
+			h.health.PickPoison();
 			Destroy(gameObject);
 		};
 
