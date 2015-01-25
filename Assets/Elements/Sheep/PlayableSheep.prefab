@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   legs: {fileID: 11440910}
   move: 1000
-  timeBeforeAxe: 10
+  timeBeforeAxe: 5
   axePref: {fileID: 168414, guid: d7cb3f4f56a430f40a92a0b4dbd54f34, type: 2}
   dieAudio: {fileID: 8300000, guid: 89ddd9a657cb14044b8e33048cfe7fd6, type: 3}
 --- !u!114 &11440910
