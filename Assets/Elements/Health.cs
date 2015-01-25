@@ -21,18 +21,29 @@ public class Health : MonoBehaviour
 	{
 		if (otherColl.gameObject.tag == damage_tag) 
 		{
-			hpCells[hp-1].SetActive(false);
+			if (hp>0)
+				hpCells[hp-1].SetActive(false);
 			if (hp > 0)
 				hp--;
 		}
-		if (damage_tag == "GoodAttack" & otherColl.gameObject.tag == "SuperAttack")
+		if (otherColl.gameObject.tag == "SuperAttack") 
 		{
-			for (int i=0; i<50; i++)
+			if (damage_tag == "SuperAttack") 
 			{
-				if (hp>0 )
-				{
-					hpCells[hp-1].SetActive(false);
-					hp--;
+				for (int i=0; i<50; i++) {
+					if (hp > 0) {
+						hpCells [hp - 1].SetActive (false);
+						hp--;
+					}
+				}
+			}
+			if (damage_tag == "GoodAttack") 
+			{
+				for (int i=0; i<50; i++) {
+					if (hp > 0) {
+						hpCells [hp - 1].SetActive (false);
+						hp--;
+					}
 				}
 			}
 		}

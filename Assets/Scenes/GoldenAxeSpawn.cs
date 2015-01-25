@@ -8,7 +8,7 @@ public class GoldenAxeSpawn : MonoBehaviour {
 	void Start () 
 	{
 		if (GoldenAxeItem.spawn)
-			Instantiate(goldenAxeItem, GoldenAxeItem.staticpos.position, GoldenAxeItem.staticpos.rotation);
+			Instantiate(goldenAxeItem, GoldenAxeItem.pos, GoldenAxeItem.rot);
 	}
 
 	void Update () 
