@@ -3,6 +3,8 @@ using System.Collections;
 
 public class GoldenAxeItem : MonoBehaviour 
 {
+	public static bool spawn = false;
+	public static Transform staticpos;
 
 	void OnTriggerEnter2D(Collider2D otherColl)
 	{
@@ -12,6 +14,8 @@ public class GoldenAxeItem : MonoBehaviour
 		if (sheep!=null) sheep.Die();
 		if (hero != null) 
 		{
+			staticpos = transform;
+			spawn = true;
 			hero.GetGoldenAxe ();
 			Destroy (gameObject);
 		}

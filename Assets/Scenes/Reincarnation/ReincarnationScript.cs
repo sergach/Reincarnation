@@ -21,7 +21,7 @@ public class ReincarnationScript : MonoBehaviour
 		time += Time.deltaTime;
 		if (time > delay) 
 		{
-			Application.LoadLevel(nextLevel);
+			Application.LoadLevel(Random.Range (0,3));
 
 		}
 	}

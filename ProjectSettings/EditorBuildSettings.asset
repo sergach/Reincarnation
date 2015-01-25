@@ -8,8 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DirectoredDungeon.unity
   - enabled: 1
+    path: Assets/Scenes/IAmPoison/IAmPoison.unity
+  - enabled: 1
+    path: Assets/Scenes/IAmAxe/IAmAxe.unity
+  - enabled: 1
     path: Assets/Scenes/Reincarnation/Reincarnation.unity
   - enabled: 1
     path: Assets/Scenes/AxeBroken/AxeBroken.unity
-  - enabled: 1
-    path: Assets/Scenes/IAmAxe/IAmAxe.unity
