@@ -14,6 +14,8 @@ public class SheepScript : MonoBehaviour {
 	private float deathTime = 0.5f;
 	private bool dead = false;
 
+	public AudioClip dieAudio;
+
 	void Start () {
 		time = 0f;	
 	}
@@ -30,6 +32,8 @@ public class SheepScript : MonoBehaviour {
 
 	public void Die()
 	{
+		AudioSource.PlayClipAtPoint(dieAudio, transform.position);
+
 		deadHeight = transform.position.y - 2f;
 		dead = true;
 		time = 0f;

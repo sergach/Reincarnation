@@ -86,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.68000007, y: 2.51999998, z: 0}
+  m_LocalPosition: {x: 5.36999989, y: -1.80999994, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 440908}
@@ -159,6 +159,7 @@ MonoBehaviour:
   move: 1000
   timeBeforeAxe: 10
   axePref: {fileID: 168414, guid: d7cb3f4f56a430f40a92a0b4dbd54f34, type: 2}
+  dieAudio: {fileID: 8300000, guid: 89ddd9a657cb14044b8e33048cfe7fd6, type: 3}
 --- !u!114 &11440910
 MonoBehaviour:
   m_ObjectHideFlags: 1

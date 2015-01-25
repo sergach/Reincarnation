@@ -20,6 +20,8 @@ public class PlayableSheepScript : MonoBehaviour {
 	private float deathTime = 0.5f;
 	private bool dead = false;
 
+	public AudioClip dieAudio;
+
 	void Start () {
 		time = 0f;	
 	}
@@ -78,6 +80,7 @@ public class PlayableSheepScript : MonoBehaviour {
 
 	public void Die()
 	{
+		AudioSource.PlayClipAtPoint(dieAudio, transform.position);
 		dead = true;
 		time = 0f;
 		legs.Go ();
